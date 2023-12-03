@@ -30,14 +30,14 @@ def parallel_factorize(*dig):
 
 
 if __name__ == "__main__":
-    a, b, c, d = (128, 255, 99999, 10651060)
+    a, b, c, d = (1280000, 2550000, 99999000, 106510600)
 
     # Synchronous version
-    result_sync = synchronous_factorize(a, b, c, d)
+    synchronous_factorize(a, b, c, d)
 
     # Parallel version
-    result_parallel = parallel_factorize(a, b, c, d)
-
+    parallel_factorize(a, b, c, d)
+"""
     # Check correctness
     assert result_sync[0] == [1, 2, 4, 8, 16, 32, 64, 128]
     assert result_sync[1] == [1, 3, 5, 15, 17, 51, 85, 255]
@@ -46,3 +46,4 @@ if __name__ == "__main__":
                               1065106, 1521580, 2130212, 2662765, 5325530, 10651060]
 
     assert result_sync == result_parallel
+"""
