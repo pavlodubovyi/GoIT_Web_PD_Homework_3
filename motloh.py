@@ -34,7 +34,7 @@ def sort_file(path: Path):
     for el in path.iterdir():
         if el.is_file():
             ext = el.suffix
-            new_folder_name = ext.lstrip(".") # removing "." from folder name, so system doesn't see it as hidden
+            new_folder_name = ext.lstrip(".")  # removing "." from folder name, so system doesn't see it as hidden
             new_path = destination_folder / new_folder_name
             try:
                 new_path.mkdir(exist_ok=True, parents=True)
